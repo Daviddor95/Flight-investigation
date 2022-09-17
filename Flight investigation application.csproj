@@ -183,13 +183,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-    <Resource Include="PicturesForREADME\Uml.png" />
-    <Resource Include="PicturesForREADME\FirstScreen.JPG" />
-    <Resource Include="PicturesForREADME\GraphsImage.png" />
-    <Resource Include="PicturesForREADME\Joystick Begining.JPG" />
-    <Resource Include="PicturesForREADME\joystickImage.png" />
-    <Resource Include="PicturesForREADME\middleScreen.png" />
-    <Resource Include="PicturesForREADME\PlayerImage.png" />
+    <Resource Include="pictures\Uml.png" />
+    <Resource Include="pictures\FirstScreen.JPG" />
+    <Resource Include="pictures\GraphsImage.png" />
+    <Resource Include="pictures\Joystick Begining.JPG" />
+    <Resource Include="pictures\joystickImage.png" />
+    <Resource Include="pictures\middleScreen.png" />
+    <Resource Include="pictures\PlayerImage.png" />
     <Content Include="settings\playback_small.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
