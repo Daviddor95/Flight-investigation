@@ -164,7 +164,6 @@ namespace ViewModel
             }
         }
 
-        //DON'T TOUCH, IT'S DAVID
         public JoystickViewModel(IFIAModel model)
         {
             this.model = model;
@@ -180,17 +179,5 @@ namespace ViewModel
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
-
-        /* public void startJoystickVM()
-         {
-             this.model.startJoystick();
-         }
-
-
-         public void startDataTableVM()
-         {
-             this.model.startDataTable();
-         }*/
     }
-
 }

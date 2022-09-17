@@ -32,6 +32,8 @@ namespace View
         {
             this.playerVM.pause();
             (e.Source as FrameworkElement).Opacity = 0.8;
+            //this.play.Opacity = 1;
+            //this.pause.Opacity = 0.3;
         }
         // Play the video on mouse up
         private void Play_MouseUp(object sender, MouseButtonEventArgs e)

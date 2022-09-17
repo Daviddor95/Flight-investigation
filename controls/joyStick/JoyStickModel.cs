@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Model
+﻿namespace Model
 {
     /// <summary>FIAModel is an partial class.
     /// its the Model part for the desktop app as part of the mvvm design pattern.
@@ -32,7 +30,13 @@ namespace Model
         {
             get
             {
-                return xOfJoystick;
+                if (this.CSVLines != null)
+                {
+                    return xOfJoystick;
+                } else
+                {
+                    return 85;
+                }
             }
             set
             {
@@ -46,7 +50,14 @@ namespace Model
         {
             get
             {
-                return yOfJoystick;
+                if (this.CSVLines != null)
+                {
+                    return yOfJoystick;
+                }
+                else
+                {
+                    return 103;
+                }
             }
             set
             {
@@ -173,7 +184,7 @@ namespace Model
         /// </summary>
         public void startJoystick()
         {
-            float radius = 55;
+            float radius = 80;
             float x = float.Parse(this.CSVLines[currentLine].Split(',')[0]);
             float y = float.Parse(this.CSVLines[currentLine].Split(',')[1]);
             //135,45 are is the center of the outer elipse of joystick
@@ -181,8 +192,8 @@ namespace Model
             //to be right in the middle of the outer elipse.
             //the elipse will move from themiddle due to
             //changes in the aileron and elevator values
-            this.aileronJoystickX = 135 + x * radius;
-            this.elevatorJoystickY = 45 + y * radius;
+            this.aileronJoystickX = 85 + x * radius;
+            this.elevatorJoystickY = 103 + y * radius;
         }
 
         /// <summary>startScrollers func' 
@@ -217,9 +228,7 @@ namespace Model
             startJoystick();
             startScrollers();
             startDataTable();
-
         }
-
     }
 }
 
