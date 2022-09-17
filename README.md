@@ -1,6 +1,6 @@
 # Flight-investigation-application
 > A desktop application that interacts with a Flight Gear simulator app.
-> This app displays real time data changes of the flight parameters, throught different charts and diagrams.
+> The application displays real time data changes of the flight parameters, using different graphs and joystick visualization.
 
 <img src = "https://github.com/Daviddor95/Flight-investigation/blob/master/pictures/middleScreen.png" width="600" height="450"></br>
 

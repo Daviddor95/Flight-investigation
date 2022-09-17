@@ -31,36 +31,43 @@ namespace View
         private void Pause_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.pause();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Play the video on mouse up
         private void Play_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.play();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Stop the video on mouse up
         private void Stop_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.stop();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Jump 10 seconds backwards on mouse up
         private void FastBackwards_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.fastBackwards();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Jump 10 seconds forward on mouse up
         private void FastForward_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.fastForward();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Jump to the start of the video on mouse up
         private void JumpToStart_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.jumpToStart();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Jump to the end of the video on mouse up
         private void JumpToEnd_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.playerVM.jumpToEnd();
+            (e.Source as FrameworkElement).Opacity = 0.8;
         }
         // Jump to the new time set when the slider's value change
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -94,15 +101,23 @@ namespace View
         private void openXML_Click(object sender, RoutedEventArgs e)
         {
             this.playerVM.loadXML();
-            this.openRegFlight.IsEnabled = true;
-            this.exception.Text = "Please open regular flight file";
-        }
-        // Open the "Open File" dialog to load the regular flight CSV file
-        private void openRegFlight_Click(object sender, RoutedEventArgs e)
-        {
-            this.playerVM.loadRegFlight();
             this.OpenCSV.IsEnabled = true;
-            this.exception.Text = "Please open test flight file";
+            this.exception.Text = "Please load a flight record";
+        }
+
+        private void Image_MouseEnter(object sender, MouseEventArgs e)
+        {
+            (e.Source as FrameworkElement).Opacity = 0.8;
+        }
+
+        private void Image_MouseLeave(object sender, MouseEventArgs e)
+        {
+            (e.Source as FrameworkElement).Opacity = 1;
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            (e.Source as FrameworkElement).Opacity = 0.5;
         }
     }
 }
